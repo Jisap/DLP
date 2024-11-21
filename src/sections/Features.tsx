@@ -1,4 +1,6 @@
+import FeatureCard from "@/components/FeatureCard";
 import Tag from "@/components/Tag";
+
 
 const features = [
 	"Asset Library",
@@ -22,27 +24,21 @@ export default function Features() {
 					<span className="text-lime-400">simplicity</span>
 				</h2>
 				<div>
-					<div>
-						<div></div>
-						<div>
-							<h3>Real-time Collaboration</h3>
-							<p>Work together seamlessly with conflict-free team editing</p>
-						</div>
-					</div>
-					<div>
-						<div></div>
-						<div>
-							<h3>Interactive Prototyping</h3>
-							<p>Engage your clients with prototypes that react to use actions</p>
-						</div>
-					</div>
-					<div>
-						<div></div>
-						<div>
-							<h3>Keyboard Quick Actions</h3>
-							<p>Powerful commands to help you create designs more quickly</p>
-						</div>
-					</div>
+					<FeatureCard 
+						title="Real-time Collaboration"
+						description="Work together seamslessly with conflict-free team editing"
+					>
+					</FeatureCard>
+					<FeatureCard
+						title="Interactive Prototyping"
+						description="Engage your clients with prototypes that react to use actions"
+					>
+					</FeatureCard>
+					<FeatureCard
+						title="Keyboard Quick Actions"
+						description="Powerful commands to help you create designs more quickly"
+					>
+					</FeatureCard>
 				</div>
 				<div>
 					{features.map((feature) => (
