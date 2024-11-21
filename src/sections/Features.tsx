@@ -65,6 +65,15 @@ export default function Features() {
 						title="Interactive Prototyping"
 						description="Engage your clients with prototypes that react to use actions"
 					>
+						<div className="aspect-video flex items-center justify-center">
+							<p className="text-4xl font-extrabold text-white/50 text-center">
+								We&apos;ve achieved{" "} 
+								<span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> 
+									incredible
+								</span>{" "}
+								growth this year
+							</p>
+						</div>
 					</FeatureCard>
 					<FeatureCard
 						title="Keyboard Quick Actions"
