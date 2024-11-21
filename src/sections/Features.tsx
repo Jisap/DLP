@@ -1,6 +1,10 @@
 import FeatureCard from "@/components/FeatureCard";
 import Tag from "@/components/Tag";
-
+import avatar1 from "@/assets/images/avatar-ashwin-santiago.jpg"
+import avatar2 from "@/assets/images/avatar-lula-meyers.jpg"
+import avatar3 from "@/assets/images/avatar-florence-shaw.jpg"
+import Image from "next/image";
+import Avatar from "@/components/Avatar";
 
 const features = [
 	"Asset Library",
@@ -20,14 +24,35 @@ export default function Features() {
 					<Tag>Features</Tag>
 				</div>
 				<h2 className="text-6xl font-medium text-center mt-6">
-					Where power meets{" "} 
+					Where power meets{" "}
 					<span className="text-lime-400">simplicity</span>
 				</h2>
-				<div>
-					<FeatureCard 
+				<div className="mt-12 grid grid-cols-1 gap-8">
+					<FeatureCard
 						title="Real-time Collaboration"
 						description="Work together seamslessly with conflict-free team editing"
 					>
+						<div className="aspect-video flex items-center justify-center">
+							<Avatar className="z-40">
+								<Image
+									src={avatar1}
+									alt="Avatar 1"
+									className="rounded-full"
+								/>
+							</Avatar>
+							<Avatar className="-ml-6 border-indigo-500 z-30">
+								<Image
+									src={avatar2}
+									alt="Avatar 2"
+								/>
+							</Avatar>
+							<Avatar className="-ml-6 border-amber-500 z-20">
+								<Image
+									src={avatar3}
+									alt="Avatar 3"
+								/>
+							</Avatar>
+						</div>
 					</FeatureCard>
 					<FeatureCard
 						title="Interactive Prototyping"
