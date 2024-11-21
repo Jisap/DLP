@@ -12,10 +12,15 @@ const features = [
 
 export default function Features() {
 	return (
-		<section>
+		<section className="py-24">
 			<div className="container">
-				<Tag>Features</Tag>
-				<h2>Where power meets <span>simplicity</span></h2>
+				<div className="flex justify-center">
+					<Tag>Features</Tag>
+				</div>
+				<h2 className="text-6xl font-medium text-center mt-6">
+					Where power meets{" "} 
+					<span className="text-lime-400">simplicity</span>
+				</h2>
 				<div>
 					<div>
 						<div></div>
@@ -41,7 +46,7 @@ export default function Features() {
 				</div>
 				<div>
 					{features.map((feature) => (
-						<div>
+						<div key={feature}>
 							<span></span>
 							<span>{feature}</span>
 						</div>
