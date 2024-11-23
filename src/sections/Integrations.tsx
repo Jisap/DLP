@@ -30,9 +30,13 @@ export default function Integrations() {
 				<p className="text-white/50 mt-4 text-lg">
 					Layers seamlessly connects with your favorite tools, making it easy to plug into any workflow and collaborate across platforms.
 				</p>
-				<div className="h-[400px] overflow-hidden [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]">
+				<div className="h-[400px] overflow-hidden grid md:grid-cols-2 gap-4 [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]">
 					<IntegrationsColumn 
 						integrations={integrations}
+					/>
+					<IntegrationsColumn 
+						integrations={integrations.slice().reverse()}
+						className="hidden md:flex"
 					/>
 				</div>
 			</div>
