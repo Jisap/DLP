@@ -10,9 +10,9 @@ const footerLinks = [
 
 export default function Footer() {
 	return (
-		<section>
+		<section className="py-16">
 			<div className="container">
-				<div>
+				<div className="flex flex-col md:flex-row items-center md:justify-between gap-6">
 					<div>
 						<Image 
 							src={logoImage}
@@ -20,9 +20,15 @@ export default function Footer() {
 						/>
 					</div>
 					<div>
-						<nav>
+						<nav className="flex gap-6">
 							{footerLinks.map((link) => (
-								<a href={link.href} key={link.label}>{link.label}</a>
+								<a 
+									href={link.href} 
+									key={link.label}
+									className="text-white/50 text-sm"
+								>
+									{link.label}
+								</a>
 							))}
 						</nav>
 					</div>
