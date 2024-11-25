@@ -5,6 +5,7 @@ import logoImage from "@/assets/images/logo.svg";
 import Button from "@/components/Button";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
+import { AnimatePresence, motion } from "framer-motion";
 
 const navLinks = [
 	{ label: "Home", href: "#" },
@@ -62,17 +63,26 @@ export default function Navbar() {
 						</div>
 					</div>
 					{/* mobile */}
-					{isOpen && (
-						<div className="flex flex-col items-center gap-4 py-2">
-							{navLinks.map((link) => (
-								<a href={link.href} key={link.label} className="py-2">
-									{link.label}
-								</a>
-							))}
-							<Button variant="secondary">Log In</Button>
-							<Button variant="primary">Sing Up</Button>
-						</div>
-					)}
+					<AnimatePresence>
+						{isOpen && (
+							<motion.div 
+								initial={{ height: 0}}
+								animate={{ height: "auto" }}
+								exit={{ height: 0 }}
+								className="overflow-hidden"
+							>
+								<div className="flex flex-col items-center gap-4 py-2 ">
+									{navLinks.map((link) => (
+										<a href={link.href} key={link.label} className="py-2">
+											{link.label}
+										</a>
+									))}
+									<Button variant="secondary">Log In</Button>
+									<Button variant="primary">Sing Up</Button>
+								</div>
+							</motion.div>
+						)}
+					</AnimatePresence>
 				</div>
 			</div>
 		</section>
