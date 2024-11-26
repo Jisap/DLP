@@ -18,7 +18,11 @@ export default function Hero() {
 		leftDesignAnimate([
 			[leftDesignScope.current, {opacity: 1}, {duration: 0.5}],
 			[leftDesignScope.current, {y:0, x:0}, {duration: 0.5}],
-
+		]);
+		leftPointerAnimate([
+			[leftPointerScope.current, {opacity: 1}, {duration: 0.5}],
+			[leftPointerScope.current, {y:0, x: -100}, {duration: 0.5}],
+			[leftPointerScope.current, { x: 0, y: [0, 16, 0]}, {duration: 0.5, ease: "easeInOut"}],
 		])
 	},[])
 
@@ -43,6 +47,7 @@ export default function Hero() {
 					</div>
 					<motion.div 
 						ref={leftPointerScope}
+						initial={{opacity: 0, y: 100, x: -200}}
 						className="absolute left-56 top-96 hidden lg:block"
 					>
 						<Pointer name="Andrea" />
