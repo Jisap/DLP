@@ -55,12 +55,12 @@ export default function Features() {
 									alt="Avatar 3"
 								/>
 							</Avatar>
-							<Avatar className="-ml-6 border-transparent">
+							<Avatar className="-ml-6 border-transparent group-hover:border-green-500 transition">
 								<div className="size-full bg-neutral-700 rounded-full inline-flex items-center justify-center gap-1 relative">
 									<Image 
 										src={avatar4}
 										alt="Avatar 4"
-										className="absolute size-full rounded-full opacity-0 group-hover:opacity-100"
+										className="absolute size-full rounded-full opacity-0 group-hover:opacity-100 transition"
 									/>
 									{Array.from({ length: 3 }).map((_, i) => (
 										<span className="size-1.5 rounded-full bg-white inline-flex" key={i}></span>
