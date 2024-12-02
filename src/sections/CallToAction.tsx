@@ -33,14 +33,14 @@ export default function CallToAction() {
 			<div className="overflow-x-clip p-4 flex">
 				<motion.div
 					ref={scope}
-					className="flex flex-none gap-16 pr-16 text-7xl md:text-8xl font-medium"
+					className="flex flex-none gap-16 pr-16 text-7xl md:text-8xl font-medium group cursor-pointer"
 					onMouseEnter={() => setIsHovered(true) }
 					onMouseLeave={() => setIsHovered(false) }
 				>
 					{Array.from({ length: 10 }).map((_, i) => (
 						<div className="flex items-center gap-16" key={i}>
 							<span className="text-lime-400 text-7xl">&#10038;</span>
-							<span>Try it for free</span>
+							<span className="group-hover:text-lime-400">Try it for free</span>
 						</div>
 					))}
 				</motion.div>
